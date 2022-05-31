@@ -10,10 +10,37 @@
         android:id="@+id/buttonTest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="TIKLA"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:text="TIKLA"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/buttonMenuOpener"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Menü Açar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Bir şey yazınız"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonTest" />
+
+    <EditText
+        android:id="@+id/editTextTest2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Bir şey yazınız 2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTest" />
 </androidx.constraintlayout.widget.ConstraintLayout>
