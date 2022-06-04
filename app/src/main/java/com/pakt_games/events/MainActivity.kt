@@ -2,12 +2,15 @@ package com.pakt_games.events
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.ContextMenu
 import android.view.KeyEvent
 import android.view.MotionEvent
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.pakt_games.events.databinding.ActivityMainBinding
+
 
 class MainActivity : AppCompatActivity() {
     private lateinit var bindingMain: ActivityMainBinding
@@ -26,6 +29,18 @@ class MainActivity : AppCompatActivity() {
         setOnTouchListenerEvent()
 
         bindingMain.editTextTest.requestFocus()
+
+        bindingMain.editTextTest.addTextChangedListener(object : TextWatcher {
+            override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
+                println(s.toString() + "     onTextChanged")
+            }
+            override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {
+                println(s.toString() + "    beforeTextChanged")
+            }
+            override fun afterTextChanged(s: Editable) {
+                println(s.toString() + "     afterTextChanged")
+            }
+        })
 
     }
 
